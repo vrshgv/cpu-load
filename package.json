@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "format": "prettier --write 'frontend/**/*.{js,vue,ts}' 'backend/**/*.{ts,js}'",
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
+    "start": "concurrently \"npm run build --prefix frontend\" \"npm run build --prefix backend && npm run start --prefix backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "prettier": "^3.3.3"
+  }
+}
